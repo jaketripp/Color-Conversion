@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hex to RGB</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+
+  
+  <!--   Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!--   Optional theme  -->  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
+</head>
+
+<body>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+
+    <div id="main">
+		  <h4>Convert between hex and RGB format</h4>
+        <div style="clear: both"></div>
+      <form>
+        <p>#</p>
+        <input type="text" maxlength="2" size="2" value="00" id="1" onclick="this.select()">
+        <input type="text" maxlength="2" size="2" value="00" id="2" onclick="this.select()">
+        <input type="text" maxlength="2" size="2" value="00" id="3" onclick="this.select()">
+        <input type="reset" id="reset">
+        <hr/>
+        <input type="text" value="rgb(0,0,0)" id="rgb" readonly>
+      </form> 
+    </div>  
+      
+		  <footer>
+		    <div class="row">
+          <p><span>&copy;</span> 2016 <a href="https://www.linkedin.com/in/jake-tripp" target="_blank">jake tripp</a></p>
+  			</div>	
+			</footer>	
+
+    </div>
+  </div>    
+</div>		
+		
+		
+
+<script src="app.js"></script>
+
+</body>
+</html>
