@@ -9,8 +9,8 @@ var App = {
 		this.bindEvents();
 	},
 	setUpHexPairs: function(e) { 
-		
-		if ((e.which >= 48 && e.which <= 57) || (e.which >= 65 && e.which <= 70) ) {
+		var accept = ['A','B','C','D','E','F',0,1,2,3,4,5,6,7,8,9]
+		if ((e.which >= 48 && e.which <= 57) || (e.which >= 65 && e.which <= 70)) {
 			this.pair1 = $("#1").val();
 			this.pair2 = $("#2").val();
 			this.pair3 = $("#3").val();
@@ -29,7 +29,7 @@ var App = {
 	},
 	autoTab: function(e) {
 		var inputID = e.target.id
-		if ( $('#' + inputID).val().length === 2 && $('#' + inputID).val() !== '00') {
+		if (((e.which >= 48 && e.which <= 57) || (e.which >= 65 && e.which <= 70)) && $('#' + inputID).val().length === 2 && $('#' + inputID).val() !== '00') {
           	$('#' + inputID).next().select();
     	}
     },
