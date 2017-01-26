@@ -72,15 +72,20 @@ body {
 #main {
   border: 1px solid white;
   background: white;
-  padding: 50px;
-  border-radius: 8px;
+  padding: 50px 0;
+  border-radius: 30px;
   text-align: center;
-  margin-top: 200px;
+  margin-top: 150px;
 }
 
 form p {
   display: inline;
   font-size: 30px;
+}
+
+h4 {
+  font-size: 25px;
+  margin-bottom: 10px;
 }
 
 form input {
@@ -100,5 +105,9 @@ form input:focus {
 
 footer {
   text-align: center;
-  margin-top: 40px;
+  margin: 40px auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 30px;
+  max-width: 200px;
 }
