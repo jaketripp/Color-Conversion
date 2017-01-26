@@ -12,9 +12,10 @@ var App = {
 
 		if ((e.which >= 48 && e.which <= 57) || (e.which >= 65 && e.which <= 70) || (e.which >= 96 && e.which <= 105)) {
 			for (var i in this.nums) {
-				this.nums[i] = $("#" + i).val();
+				this.nums[i] = $("#" + i).val().toUpperCase();
 			}
 		}
+		console.log(Object.values(this.nums));
 	},
 	autoTab: function(e) {
 		var inputID = e.target.id
@@ -34,6 +35,8 @@ var App = {
 			this.nums[i] = '0'
 			$('#' + i).val('0')
 		}
+
+		$('#rgb').val('rgb(0,0,0)');
 		$('body').css('background-color', 'black');
 		$('#1').focus().select();
 	},
