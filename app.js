@@ -1,62 +1,60 @@
 
 jQuery(function ($) {
 var App = {
-	pair1: '',
-	pair2: '',
-	pair3: '',
-
+	nums: {
+		1: '0',
+		2: '0',
+		3: '0',
+		4: '0',
+		5: '0',
+		6: '0',
+	},
 	init: function() {
 		this.bindEvents();
+		this.resetHexNums();
 	},
-	setUpHexPairs: function(e) { 
-		var accept = ['A','B','C','D','E','F',0,1,2,3,4,5,6,7,8,9]
-		if ((e.which >= 48 && e.which <= 57) || (e.which >= 65 && e.which <= 70)) {
-			this.pair1 = $("#1").val();
-			this.pair2 = $("#2").val();
-			this.pair3 = $("#3").val();
-		}
-
-
-		if (this.pair1.length === 1) {
-			this.pair1 += this.pair1;
-		} 
-		if (this.pair2.length === 1) {
-			this.pair2 += this.pair2;
-		}
-		if (this.pair3.length === 1) {
-			this.pair3 += this.pair3;
+	setUpHexNums: function(e) { 
+		console.log(e.which)
+		if ((e.which >= 48 && e.which <= 57) || (e.which >= 65 && e.which <= 70) || (e.which >= 96 && e.which <= 105)) {
+			for (var i in this.nums) {
+				this.nums[i] = $("#" + i).val();
+			}
 		}
 	},
 	autoTab: function(e) {
 		var inputID = e.target.id
-		if (((e.which >= 48 && e.which <= 57) || (e.which >= 65 && e.which <= 70)) && $('#' + inputID).val().length === 2 && $('#' + inputID).val() !== '00') {
-          	$('#' + inputID).next().select();
+		if (((e.which >= 48 && e.which <= 57) || (e.which >= 65 && e.which <= 70) || (e.which >= 96 && e.which <= 105)) && $('#' + inputID).val().length === 1) {
+          	$('#' + inputID).next().focus().select();
     	}
     },
 	updateDOMInputs: function(e) {
 		// run on blur 
 		// find out how to automatic tab
-		if ($('#1').val().length === 1) {
-			$('#1').val(this.pair1);
-		} 
-		if ($('#2').val().length === 1) {
-			$('#2').val(this.pair2);
+		for (var i in this.nums) {
+			if ($('#' + i).val().length === 1) {
+				$('#' + i).val(this.nums[i]);
+			}  
 		}
-		if ($('#3').val().length === 1) {
-			$('#3').val(this.pair3);
-		}		
-		console.log(this.pair1, this.pair2, this.pair3)
+		console.log(Object.values(this.nums));
 	},
-	clearHexPairs: function() {
-		this.pair1 = '00';
-		this.pair2 = '00';
-		this.pair3 = '00';
+	resetHexNums: function() {
+		for (var i in this.nums) {
+			this.nums[i] = '0'
+			$('#' + i).val('0')
+		}
+	},
+	calculateRGB: function() {
+		var domNum1 = $('#1').val();
+		var domPair2 = $('#2').val();
+		var domPair3 = $('#3').val();
+
+
 	},
 	bindEvents: function() {
-		$('input').on('keyup', this.setUpHexPairs.bind(this));
+		$('input').on('keyup', this.setUpHexNums.bind(this));
 		$('input').on('keyup', this.autoTab.bind(this));
 		$('input').on('blur', this.updateDOMInputs.bind(this));
-		$('#reset').on('click', this.clearHexPairs.bind(this));
+		$('#reset').on('click', this.resetHexNums.bind(this));
 	}
 	
 
