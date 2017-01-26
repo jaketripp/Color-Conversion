@@ -1,1 +1,1 @@
-https://jaketripp.github.io/ColorConversion/index.html
+https://jaketripp.github.io/Color-Conversion/
