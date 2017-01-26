@@ -47,7 +47,7 @@ var App = {
 		var domNum1 = $('#1').val();
 		var domPair2 = $('#2').val();
 		var domPair3 = $('#3').val();
-
+		// you're HERE
 
 	},
 	bindEvents: function() {
