@@ -25,6 +25,14 @@ var App = {
           	$('#' + inputID).next().focus().select();
     	}
     },
+    enablePhone: function() {
+    	$('input[maxlength]').on('keydown', function(event) {
+		    var $this = $(this);
+		    if ($this.val().length > parseInt($this.attr('maxlength'), 10)) {
+		        event.preventDefault();
+		    }
+		});
+    },
 	updateDOMInputs: function(e) {
 		for (var i in this.nums) {
 			$('#' + i).val(this.nums[i]);
