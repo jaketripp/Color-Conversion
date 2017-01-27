@@ -12,7 +12,9 @@ var App = {
 
 		if ((e.which >= 48 && e.which <= 57) || (e.which >= 65 && e.which <= 70) || (e.which >= 96 && e.which <= 105)) {
 			for (var i in this.nums) {
+				if ($("#" + i).val().length) {
 				this.nums[i] = $("#" + i).val().toUpperCase();
+				}
 			}
 		}
 		console.log(Object.values(this.nums));
@@ -25,9 +27,7 @@ var App = {
     },
 	updateDOMInputs: function(e) {
 		for (var i in this.nums) {
-			if ($('#' + i).val().length > 0) {
-				$('#' + i).val(this.nums[i]);
-			}  
+			$('#' + i).val(this.nums[i]);
 		}
 	},
 	resetHexNums: function() {
