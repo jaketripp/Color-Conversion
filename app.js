@@ -27,9 +27,8 @@ var App = {
     },
     enablePhone: function(e) {
     	var $input = $('#' + e.target.id);
-	    var max = 1;
-	    if ($input.val().length > max) {
-	        $input.val($input.val().substr(0, max));
+	    if ($input.val().length > 1) {
+	        $input.val($input.val().slice(0, 1));
 	    }
     },
 	updateDOMInputs: function(e) {
@@ -75,7 +74,7 @@ var App = {
 		$('input').on('keyup', this.setUpHexNums.bind(this));
 		$('input').on('keyup', this.autoTab.bind(this));
 		$('input').on('keyup', this.calculateRGB.bind(this));
-		$('input[maxlength]').on('keyup', this.enablePhone.bind(this));
+		$('input[maxlength]').on('keypress', this.enablePhone.bind(this));
 		$('input').on('blur', this.updateDOMInputs.bind(this));
 		$('#reset').on('click', this.resetHexNums.bind(this));
 	}
