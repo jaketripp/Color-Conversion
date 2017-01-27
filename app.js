@@ -25,8 +25,8 @@ var App = {
           	$('#' + inputID).next().focus().select();
     	}
     },
-    enablePhone: function() {
-    	var $input = $('input[maxlength]');
+    enablePhone: function(e) {
+    	var $input = $('#' + e.target.id);
 	    var max = 1;
 	    if ($input.val().length > max) {
 	        $input.val($input.val().substr(0, max));
