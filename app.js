@@ -26,12 +26,11 @@ var App = {
     	}
     },
     enablePhone: function() {
-    	$('input[maxlength]').on('keydown', function(event) {
-		    var $this = $(this);
-		    if ($this.val().length > parseInt($this.attr('maxlength'), 10)) {
-		        event.preventDefault();
-		    }
-		});
+    	var $input = $('input[maxlength]');
+	    var max = 1;
+	    if ($input.val().length > max) {
+	        $input.val($input.val().substr(0, max));
+	    }
     },
 	updateDOMInputs: function(e) {
 		for (var i in this.nums) {
@@ -76,6 +75,7 @@ var App = {
 		$('input').on('keyup', this.setUpHexNums.bind(this));
 		$('input').on('keyup', this.autoTab.bind(this));
 		$('input').on('keyup', this.calculateRGB.bind(this));
+		$('input[maxlength]').on('keyup', this.enablePhone.bind(this));
 		$('input').on('blur', this.updateDOMInputs.bind(this));
 		$('#reset').on('click', this.resetHexNums.bind(this));
 	}
