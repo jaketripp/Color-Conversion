@@ -17,7 +17,6 @@ var App = {
 				}
 			}
 		}
-		console.log(Object.values(this.nums));
 	},
 	autoTab: function(e) {
 		var inputID = e.target.id
