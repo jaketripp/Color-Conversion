@@ -66,9 +66,10 @@ var App = {
 		this.pair3 = (domNum5 * 16) + domNum6;
 
 
-		var RGBString = 'rgb(' + this.pair1 + ',' + this.pair2 + ',' + this.pair3 + ')'
+		var cssRGBString = 'rgb(' + this.pair1 + ',' + this.pair2 + ',' + this.pair3 + ')'
+		var RGBString = 'rgb ( ' + this.pair1 + ', ' + this.pair2 + ', ' + this.pair3 + ' )'
 		$('#rgb').val(RGBString);
-		$('body').css('background-color', RGBString);
+		$('body').css('background-color', cssRGBString);
 	},
 	bindEvents: function() {
 		$('input').on('keyup', this.setUpHexNums.bind(this));
