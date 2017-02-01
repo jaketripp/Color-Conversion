@@ -135,6 +135,6 @@ footer {
 
 @media only screen and (max-width: 650px) {
   h1 {
-    font-size: calc(15px + 10 * ((100vw - 320px) / (650 - 320)));
+    font-size: calc(20px + 10 * ((100vw - 320px) / (650 - 320)));
   }
 }
