@@ -98,7 +98,7 @@ form input {
   text-align: center;
   border-radius: 6px;
   text-transform: uppercase;
-  min-width: 48px;
+  max-width: 48px;
 }
 
 form input:focus {
