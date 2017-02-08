@@ -18,6 +18,6 @@ You can checkout Color Conversion [here](https://jaketripp.github.io/Color-Conve
 
 ### Screenshots:
 
-![Color Conversion](screenshot.png)
+![Color Conversion](screenshot.PNG)
 
 - - - - 
