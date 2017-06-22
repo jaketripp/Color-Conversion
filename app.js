@@ -42,7 +42,7 @@ function reset() {
 		$('#' + i).val('0');
 	}
 
-	$('#rgb').val('rgb(0,0,0)');
+	$('#rgb').text('rgb(0,0,0)');
 	$('body').css('background-color', 'black');
 	$('#1').focus().select();
 }
@@ -86,7 +86,7 @@ function calculateRGB() {
 // updates background and the text showing the rgb conversion
 function updateBackgroundColor(){
 	var rgb = calculateRGB();
-	$('#rgb').val(rgb);
+	$('#rgb').text(rgb);
 	$('body').css('background-color', rgb);
 }
 
