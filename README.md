@@ -15,11 +15,3 @@ You can checkout Color Conversion [here](https://jaketripp.github.io/Color-Conve
 * Utilizes subtle techniques to enhance UX (autotabs, autohighlights, can be used without a mouse, etc)
 
 * Starts off with a random color
-
-- - - - 
-
-### Screenshots:
-
-![Color Conversion](screenshot.PNG)
-
-- - - - 
