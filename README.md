@@ -1,4 +1,4 @@
-#Color Conversion
+# Color Conversion
 #### Written with JavaScript, HTML, CSS, Bootstrap, & jQuery.
 
 You can checkout Color Conversion [here](https://jaketripp.github.io/Color-Conversion/ "Color Conversion"). Next time you find yourself with an aching desire to understand how to convert from hexadecimal to RGB, head on over to this website!   
@@ -15,11 +15,3 @@ You can checkout Color Conversion [here](https://jaketripp.github.io/Color-Conve
 * Utilizes subtle techniques to enhance UX (autotabs, autohighlights, can be used without a mouse, etc)
 
 * Starts off with a random color
-
-- - - - 
-
-### Screenshots:
-
-![Color Conversion](screenshot.PNG)
-
-- - - - 
