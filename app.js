@@ -50,15 +50,16 @@ function reset() {
 // only update nums if a valid hex character inputted
 // autotab to next input and focus and select it
 function setUpHexNums(e) { 
-	var input = e.target;
-	var id = input.id;
+	var id = e.target.id;
+	var input = $('#' + id);
+	var inputVal = $('#' + id).val();
 	
-	if (/^([0-9a-fA-F]){1}$/.test(e.key) && input.value.length === 1) {
-		nums[id] = input.value.toUpperCase();
-		$('#' + id).attr('value', nums[id]);
-		$('#' + id).next().focus().select();
+	if (/^([0-9a-fA-F]){1}$/.test(e.key) && inputVal.length === 1) {
+		nums[id] = inputVal.toUpperCase();
+		input.attr('value', nums[id]);
+		input.next().focus().select();
 	} else {
-		$('#' + id).val('');
+		input.val('');
 	}	
 }
 
