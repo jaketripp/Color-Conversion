@@ -52,18 +52,14 @@ function reset() {
 function setUpHexNums(e) { 
 	var input = e.target;
 	var id = input.id;
-
-	// check if value and the key pressed are both one valid hex character
-	// if statements split up for readability
-	if (e.key.length === 1) {
-		if (/([0-9a-fA-F]){1}/.test(input.value) && /([0-9a-fA-F]){1}/.test(e.key)) {
-			nums[id] = input.value.toUpperCase();
-			$('#' + id).attr('value', nums[id]);
-			$('#' + id).next().focus().select();
-		} else {
-			$('#' + id).val('');
-		}
-	}
+	
+	if (/^([0-9a-fA-F]){1}$/.test(e.key) && input.value.length === 1) {
+		nums[id] = input.value.toUpperCase();
+		$('#' + id).attr('value', nums[id]);
+		$('#' + id).next().focus().select();
+	} else {
+		$('#' + id).val('');
+	}	
 }
 
 // calculates rgb from 6 input values and return rgb string
