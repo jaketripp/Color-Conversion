@@ -69,7 +69,7 @@ function calculateRGB() {
 	var domNum1 = parseInt(nums[1], 16);
 	var domNum2 = parseInt(nums[2], 16);
 	var pair1 = (domNum1 * 16) + domNum2;
-	
+
 	// pair 2 - G
 	var domNum3 = parseInt(nums[3], 16);
 	var domNum4 = parseInt(nums[4], 16);
@@ -79,8 +79,10 @@ function calculateRGB() {
 	var domNum5 = parseInt(nums[5], 16);
 	var domNum6 = parseInt(nums[6], 16);
 	var pair3 = (domNum5 * 16) + domNum6;
+	
+	var rgb = 'rgb(' + pair1 + ',' + pair2 + ',' + pair3 + ')';
 
-	return `rgb(${pair1}, ${pair2}, ${pair3})`;
+	return rgb;
 }
 
 function repopulateEmptyInput(e) {
