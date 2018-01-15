@@ -1,50 +1,54 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Color Conversion</title>
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="UTF-8">
 
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
-  
-  <link rel="stylesheet" type="text/css" href="style.css">
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    
+<head>
+	<title>Color Conversion</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
 </head>
+
 <body>
 
-  <div class="main">
-        
-    <h1>Convert between hex and RGB format</h1>
-    <div class="ui raised segment">
-      <form class="ui form">
-        <div class="fields">
-          <div class="seven fields">
-            <input type="text" value="0" id="1">
-            <input type="text" value="0" id="2">
-            <input type="text" value="0" id="3">
-            <input type="text" value="0" id="4">
-            <input type="text" value="0" id="5">
-            <input type="text" value="0" id="6">
-            <button type="button" id="reset" class="ui button">RESET</button>
-          </div>  
-        </div>  
-      </form> 
-      
-      <div class="ui divider"></div>
+	<div class="main">
 
-      <div class="ui label" id="rgb">rgb(0,0,0)</div>
-    </div>  
-      
-    <footer>
-        <div class="ui pointing label"><span>&copy;</span> 2016 <a href="https://www.linkedin.com/in/jake-tripp" target="_blank">jake tripp</a></div>
-    </footer> 
-    
-  </div>    
+		<h1>Convert between hex and RGB format</h1>
+		<div class="ui raised segment">
+			<form class="ui form">
+				<div class="fields">
+					<input type="text" value="0" id="1">
+					<input type="text" value="0" id="2">
+					<input type="text" value="0" id="3">
+					<input type="text" value="0" id="4">
+					<input type="text" value="0" id="5">
+					<input type="text" value="0" id="6">
+					<button type="button" id="reset" class="ui button">RESET</button>
+				</div>
+			</form>
 
-  <script src="app.js"></script>
+			<div class="ui divider"></div>
+
+			<div class="ui label" id="rgb">rgb(0,0,0)</div>
+		</div>
+
+		<footer>
+			<div class="ui pointing label">
+				<span>&copy;</span> 2016
+				<a href="https://www.linkedin.com/in/jake-tripp" target="_blank">jake tripp</a>
+			</div>
+		</footer>
+
+	</div>
+
+	<script src="app.js"></script>
 
 </body>
+
 </html>

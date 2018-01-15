@@ -55,9 +55,9 @@ $(document).ready(function() {
 		if (/^([0-9a-f]){1}$/i.test(key) && input.val().length === 1) {
 			nums[id] = key.toUpperCase();
 			// input.attr('value', nums[id]);
-			var nextInput = input.next('input');
+			var nextInput = input.next();
 			setTimeout(() => {
-				nextInput.select();
+				nextInput.focus().select();
 			}, 0);
 		} else {
 			input.val('');
