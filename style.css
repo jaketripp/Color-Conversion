@@ -28,29 +28,34 @@ body {
 }
 
 .main {
-  margin: 20vh 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
-  font-size: 33px;
+  font-size: 33px !important;
   font-family: "Helvetica",Helvetica,Arial,sans-serif;
   text-align: center;
   color: white;
   font-weight: 900;
   padding: 7px;
   border-radius: 10px;
-  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
-               0px 8px 13px rgba(0,0,0,0.1),
-               0px 18px 23px rgba(0,0,0,0.1);
+  text-shadow: 0px 2px 4px rgba(0,0,0,0.5);
+
 }
 
-
+div#rgb {
+  font-size: 20px;
+}
 
 form input {
   text-align: center;
   border-radius: 6px;
   text-transform: uppercase;
-  max-width: 48px;
+  width: 20vw !important;
+  height: 20vw !important;
+  font-size: 25px !important;
 }
 
 .ui.form input[type=text], .ui.form div, .ui.form button {

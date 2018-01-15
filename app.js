@@ -55,7 +55,7 @@ $(document).ready(function() {
 		if (/^([0-9a-f]){1}$/i.test(key) && input.val().length === 1) {
 			nums[id] = key.toUpperCase();
 			// input.attr('value', nums[id]);
-			input.next().focus().select();
+			input.next('input').focus();
 		} else {
 			input.val('');
 		}	
@@ -98,6 +98,10 @@ $(document).ready(function() {
 		$('input').on('input', updateBackgroundColor);
 		$('#reset').on('click', reset);
 		$('input').on('blur', repopulateEmptyInput);
+		$('input').on('focus', function(e){
+			e.preventDefault();
+			$(this).select();
+		})
 	}
 
 	function init(){
